@@ -6,6 +6,12 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
 {
     public float speed;
     public float rotationSpeed;
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -22,5 +28,22 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+        if( horizontalInput != 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+
+        else if(verticalInput != 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+
+      
     }
 }
