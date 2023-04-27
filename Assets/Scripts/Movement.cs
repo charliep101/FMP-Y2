@@ -44,6 +44,12 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
             animator.SetBool("isMoving", false);
         }
 
+
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("Attacking");
+        }
       
     }
 }
