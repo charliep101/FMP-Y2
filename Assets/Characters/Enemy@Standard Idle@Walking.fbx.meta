@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 097fbee34bc00b44aafaa9a32f0b478f
+guid: 587403ce2d89c474fa6f176e37cfc23d
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
   - first:
-      74: -4791504522942941401
-    second: Armature|Armature|mixamo.com|Layer0
+      74: -203655887218126122
+    second: Standard Idle@Walking
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Armature|mixamo.com|Layer0
-      takeName: Armature|Armature|mixamo.com|Layer0
+      name: Standard Idle@Walking
+      takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 470
+      lastFrame: 61
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -108,11 +108,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - fab24b5fc7e97bb4cb700ccdefa54a12
-  - 0abe9de2b1597fe41b6784204cabf9bb
-  - 219cf72d65bce5c4d9b4d77e9d1e94a7
-  - 0c289e0b9a4a3a549a89523c9abae742
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3

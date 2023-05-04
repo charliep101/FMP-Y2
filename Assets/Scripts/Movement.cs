@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com/@domi.thedev)
@@ -29,12 +30,12 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
-        if( horizontalInput != 0)
+        if (horizontalInput != 0)
         {
             animator.SetBool("isMoving", true);
         }
 
-        else if(verticalInput != 0)
+        else if (verticalInput != 0)
         {
             animator.SetBool("isMoving", true);
         }
@@ -50,6 +51,28 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
         {
             animator.SetTrigger("Attacking");
         }
+
+        
       
     }
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Enemy")
+        {
+
+            animator.SetTrigger("Death");
+            speed = 0;
+            rotationSpeed = 0;
+        }
+
+        if (collider.gameObject.tag == "Enemy" && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log("enemy hit");
+        }
+    }
+
+    
+    
+      
+    
 }
