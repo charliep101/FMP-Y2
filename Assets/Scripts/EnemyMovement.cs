@@ -62,5 +62,20 @@ public class EnemyMovement : MonoBehaviour
         }
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Enemy Hit");
+            speed = 0;
+
+            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+
+            animator.SetTrigger("eDeath");
+
+            
+        }
+    }
 }
 

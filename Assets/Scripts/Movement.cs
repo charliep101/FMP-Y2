@@ -47,10 +47,7 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
 
 
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            animator.SetTrigger("Attacking");
-        }
+     
 
         
       
@@ -65,14 +62,18 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
             rotationSpeed = 0;
         }
 
-        if (collider.gameObject.tag == "Enemy" && Input.GetKeyDown(KeyCode.Mouse0))
+   
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("enemy hit");
+            animator.SetTrigger("Attacking");
         }
     }
 
-    
-    
-      
-    
+
+
+
 }
