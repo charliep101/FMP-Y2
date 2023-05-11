@@ -9,9 +9,12 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
     public float rotationSpeed;
     Animator animator;
 
+    private Rigidbody rb;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb= GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -45,13 +48,16 @@ public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com
             animator.SetBool("isMoving", false);
         }
 
-
-
-     
-
-        
+        rb.velocity = movementDirection * speed;
       
     }
+
+  
+
+
+
+
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Enemy")

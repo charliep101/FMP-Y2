@@ -3197,7 +3197,7 @@ GameObject:
   - component: {fileID: 7565414302357689802}
   - component: {fileID: 7222834718268535385}
   - component: {fileID: 7222834718268535366}
-  - component: {fileID: 7222834718268535384}
+  - component: {fileID: 7346791086241733751}
   m_Layer: 0
   m_Name: Player(Rigged)@Standing Run Forward
   m_TagString: Player
@@ -3282,7 +3282,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0.2}
---- !u!65 &7222834718268535384
+--- !u!65 &7346791086241733751
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3293,8 +3293,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.054757, z: 0.47740757}
-  m_Center: {x: 0, y: 0.8188152, z: 0.74021095}
+  m_Size: {x: 1, y: 1.0295622, z: 0.65103614}
+  m_Center: {x: 0, y: 0.8024826, z: 0.17448193}
 --- !u!1 &7262599151452306231
 GameObject:
   m_ObjectHideFlags: 0
