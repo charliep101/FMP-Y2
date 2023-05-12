@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] points;
     int current;
     public float speed;
+    
     Animator animator;
 
     
@@ -42,6 +43,10 @@ public class EnemyMovement : MonoBehaviour
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+
+      
+
+
     }
 
     private IEnumerator WaitForSceneLoad()
