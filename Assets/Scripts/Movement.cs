@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Movement : MonoBehaviour //Code Made By Domi.theDev(www.youtube.com/@domi.thedev)
+public class Movement : MonoBehaviour 
 {
     public float speed;
     public float rotationSpeed;
