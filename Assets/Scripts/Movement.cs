@@ -10,11 +10,15 @@ public class Movement : MonoBehaviour
     Animator animator;
 
     private Rigidbody rb;
+    public AudioSource punch;
+    
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb= GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        punch = GetComponent<AudioSource>();
+        
     }
 
     void Update()
@@ -36,16 +40,19 @@ public class Movement : MonoBehaviour
         if (horizontalInput != 0)
         {
             animator.SetBool("isMoving", true);
+            
         }
 
         else if (verticalInput != 0)
         {
             animator.SetBool("isMoving", true);
+            
         }
 
         else
         {
             animator.SetBool("isMoving", false);
+            
         }
 
         rb.velocity = movementDirection * speed;
@@ -66,6 +73,7 @@ public class Movement : MonoBehaviour
             animator.SetTrigger("Death");
             speed = 0;
             rotationSpeed = 0;
+
         }
 
    
@@ -76,6 +84,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             animator.SetTrigger("Attacking");
+            punch.Play();
         }
     }
 
